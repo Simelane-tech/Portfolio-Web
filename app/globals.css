@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --midnight: #0a192f;
+  --night: #060b14;
+  --cream: #f5f5dc;
+  --line: rgba(245, 245, 220, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--night);
+  color: var(--cream);
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(rgba(245, 245, 220, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 245, 220, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 15% 15%, rgba(60, 123, 255, 0.25), transparent 35%),
+    radial-gradient(circle at 85% 10%, rgba(245, 245, 220, 0.12), transparent 30%),
+    linear-gradient(180deg, #060b14 0%, #0a192f 45%, #060b14 100%);
+  background-size: 34px 34px, 34px 34px, auto, auto, auto;
+}
+
+section {
+  scroll-margin-top: 96px;
+}
+
+.glass {
+  background: rgba(10, 25, 47, 0.45);
+  border: 1px solid rgba(245, 245, 220, 0.14);
+  backdrop-filter: blur(16px);
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, #f5f5dc 20%, #8ab4ff 55%, #f5f5dc 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
